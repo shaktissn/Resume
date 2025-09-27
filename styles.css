@@ -1,3 +1,4 @@
+/* minimal styles (omitted for brevity, same as before) */
 /* styles.css - simple modern look, responsive */
 :root{
   --bg:#0f1724;
@@ -146,4 +147,71 @@ body{
   .nav-toggle{display:block}
   .hero{flex-direction:column; align-items:flex-start; padding:40px 5vw}
   .resume-wrap{height:420px}
+}
+
+
+/* Certificates Gallery */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.certificates-grid a {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certificates-grid a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.5);
+}
+
+.certificates-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+/* Certificates Gallery - Updated for uniform size and 3 per row */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.certificates-grid a {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certificates-grid a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.5);
+}
+
+.certificates-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,3 +1,4 @@
+// script.js (same as before)
 // script.js - small interactive bits: smooth scroll, mobile nav toggle, simple reveal
 document.addEventListener('DOMContentLoaded', function() {
   // smooth scroll for internal links
